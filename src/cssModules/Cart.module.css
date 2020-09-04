@@ -1,0 +1,94 @@
+.cartFooter{
+  display : flex;
+  flex-direction : row;
+  margin-right : 1%;
+}
+
+table{
+  max-width : 100%;
+  overflow-x: hidden; 
+
+}
+
+.bodyFluid{
+   max-width : 100%;
+    margin-left: 2%;
+    margin-right : 2%;
+    /* overflow-x: hidden; */
+}
+
+.design_remove_flex{
+  display : flex;
+}
+
+.cart_remove_flex{
+  flex : 1;
+}
+
+.quantity{
+  width : 60px;
+  height : 20px;
+}
+
+.cartTotal {
+  display : flex;
+  flex-direction : row;
+  margin-left: 2%;
+}
+
+.flexfooter{
+  flex : 1;
+}
+
+.cartOrder{
+  background-color : orange;
+  color : white;
+  border : 1px solid orange;
+  box-shadow : 2px 2px 2px 2px grey;;
+  outline-color: aliceblue;
+}
+
+.totalspan1 {
+  color : orange;
+  font-weight : bold;
+  font-size : 25px;
+}
+
+.totalspan2{
+  color : black;
+  font-weight : bold;
+  font-size : 25px;
+
+}
+
+.orderCaution {
+  max-width : 80%;
+  margin-top : 25%;
+  margin-left : 15%;
+  padding-bottom : 20%;
+  max-height : 100%;
+  
+}
+
+.orderCaution span {
+  color : orangered;
+}
+
+.orderCaution button {
+  background-color : orange;
+  color : white;
+  border : 1px solid orange;
+  outline-color : orange;
+  box-shadow : 2px 2px 2px 2px grey;;
+}
+
+
+@media only screen and (min-width: 768px){
+  
+  .bodyFluid{
+    margin-left: 15%;
+    margin-right : 15%;
+}
+
+
+}

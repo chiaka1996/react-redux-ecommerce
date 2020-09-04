@@ -1,0 +1,235 @@
+.navContainer{
+  max-width : 100%;
+    /* height : 80px; */
+    float : none;
+}
+.navigationLink{
+  width : 100%;
+  display : flex;
+} 
+
+.bars{
+  display : block;
+  margin-top: 3%;
+   margin-left : 3%;
+}
+
+nav{
+  width : 100%;
+    font-family : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.linksdiv{
+  display: none;
+}
+
+.brandName{
+  margin-left : 10%;
+  font-size : 30px;
+  margin-top: 4%;
+  color : black;
+}
+
+.cartUser{
+  width : 100%;
+  margin-top : 4%;
+  display : flex;
+  margin-left : 30%;
+  padding-top : 0.5%;
+}
+
+/* .subLink2{
+  margin-right : 50%;
+  font-size: 20px;
+  color : red;
+} */
+.cartIcon{
+  display: flex;
+  color : black;
+}
+
+.cartIcon:hover{
+  color : blue;
+}
+
+.cartIcon:active{
+  color : blue;
+}
+
+.linknav{
+  color : black;
+  margin-right : 20%;
+}
+
+.cartIcon span{
+  display : none;
+}
+
+.subLink3{
+  color : black;
+}
+
+.subLink3:hover { 
+  color : blue;
+}
+
+.subLink3:active { 
+  color : blue;
+}
+
+.linknav2 {
+  color : black;
+}
+
+.profileLogout{
+display: none;  
+
+}
+
+.displayProfileLogout{
+  width : inherit;
+  position : relative;
+  color : orange;
+  box-shadow : 5px 5px 5px 5px lightgrey;
+  padding-left : 25%;
+  font-size : 13px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight : none;
+}
+
+@media only screen and (min-width: 300px) and (max-width : 400px){
+  .brandName{
+    margin-right : 5%;
+    font-size : 29px;
+  }
+
+  .cartUser{
+    margin-left : 24%;
+  }
+
+  .username{
+    margin-top : 6%;
+    font-size : 12px;
+  }
+  .linknav{
+    margin-right : 12%;
+  }
+}
+
+@media only screen and (min-width: 760px){
+  .bars{
+    display : none;
+  }
+  .navContainer{
+    width : 100%;
+    /* height : 80px; */
+    float : none;
+    
+  }
+
+  .cartIcon span{
+    display : none;
+  }
+  
+  nav{
+    width : 100%;
+    font-family : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .navigationLink{
+    width : 100%;
+    display : flex;
+  }
+  
+  .brandName{
+    margin-left : 17%;
+    font-size : 41px;
+    margin-top: 3%;
+    color : black;
+  }
+  
+  .linksdiv{
+    margin-top : 3%;
+    display : flex;
+    margin-left : 9%;
+    margin-right : 2%;
+    font-size : 25px;
+  }
+  
+  .subLink{
+    margin-right : 25%; 
+  }
+  
+  .cartUser{
+    margin-top : 4%;
+    display : flex;
+    margin-left : 20%;
+    padding-top : 0.1%;
+  }
+  .cartIcon{
+    display: flex;
+  }
+   /* .subLink2{
+     margin-right : 65%;
+     font-size: 20px;
+     background-color : red;
+   } */
+   .linknav{
+     color : black;
+   }
+
+   @media only screen and (min-width: 1000px) and (max-width:1050px){
+    .brandName{
+      margin-left : 19%;
+      font-size : 61px;
+      margin-top: 3%;
+    }
+
+    .linksdiv{
+      margin-top : 3%;
+      display : flex;
+      margin-left : 9%;
+      margin-right : 2%;
+      font-size : 33px;
+    }
+
+   /* .subLink2{
+    margin-right : 65%;
+    font-size: 23px;
+  } */
+}
+
+@media only screen and (min-width: 1051px){
+  .brandName{
+    margin-left : 90%;
+    font-size : 35px;
+    margin-top: 10%;
+  }
+
+  /* .navContainer{
+    height : 60px;
+  } */
+
+  .linksdiv{
+    margin-top : 2%;
+    display : flex;
+    margin-left : 15%;
+    margin-right : 8%;
+    font-size : 20px;
+  }
+  .subLink{
+    margin-right : 140%; 
+  }
+
+  .cartUser{
+    margin-top : 2%;
+    display : flex;
+    margin-left : 36%;
+    padding-top : 0.5%;
+  }
+ /* .subLink2{
+  margin-right : 90%;
+  font-size: 18px;
+} */
+}
+}

@@ -1,0 +1,57 @@
+.sideContainer{
+    height : 100%;
+    background-color : white;
+    box-shadow : 1px 0px 1px grey;
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 70%;
+    z-index : 200;
+    color : #000000;
+    transform: translateX(-100%);   
+}
+
+.open{
+    transition : transform 0.5s ease-out;
+    transform : translateX(0); 
+}
+nav div header span {
+    font-size : 24px;
+    margin-left : 15px;
+    margin-top : 5px;
+}
+nav div header div {
+    flex : 1;
+}
+
+nav div header{
+    display : flex;
+    margin-bottom : 5%;
+}
+
+.subnavs div {
+    margin-top: 10%;
+    margin-left : 10%;
+}
+
+.subnavs div span {
+    margin-left : 4%;
+}
+
+nav div div ul {
+    list-style : none;
+    margin-left : 0;
+}
+
+nav div div ul li {
+
+    margin-left : 0;
+}
+
+.remover{
+    color : red;
+}
+
+.sidelink{
+    color : black;
+}

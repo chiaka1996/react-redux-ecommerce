@@ -1,0 +1,155 @@
+.action{
+    display : flex;
+}
+
+.actionFlex{
+    flex : 1;
+}
+
+.admin{
+    margin-left : 30%;
+}
+
+.modalForm label{
+font-size : 22px;
+}
+
+.modalForm input {
+    width : 95%;
+}
+
+.btnlogin{
+    color : white;
+    background-color : blue;
+    border-radius : 50px;
+}
+
+.adminLoginTitle{
+    color : blue;
+}
+
+.adminBody{
+    background: white;
+}
+.adminLoginbody{
+    background-color : white;
+        margin-left : 0;
+        margin-right : 0;
+        margin-bottom : 0;
+
+}
+
+.adminLoginbody header {
+    margin-left : 35%;
+    padding-top : 5%;
+    margin-bottom: 11%;
+    font-size : 25px;
+    color : rgb(55, 0, 255);
+}
+
+.adminLoginbody label{
+    font-size : 20px;
+    margin-left : 4%;
+    font-weight : bold;
+}
+
+.adminLoginbody input {
+    width: 90%;
+    height: 50px;
+    margin-left : 4%;
+    margin-right : 4%;
+    margin-bottom: 3%;
+}
+
+.adminLoginbody button {
+    width: 90%;
+    height : 30%;
+    margin-left : 4%;
+    margin-right : 4%;
+    margin-top : 2%;
+    margin-bottom : 1%;
+    background-color : rgb(55, 0, 255) ;
+    border-radius : 50px;
+}
+
+.adminLoginbody button span {
+    color : white;
+}
+
+.adminLoginbody form div {
+    margin-left : 4%;
+    margin-top : 2%;
+}
+
+/* adminNavigation */
+nav{
+    background-color : white;
+    display : flex;
+    width : 100%;
+}
+
+.adminPanel{
+    color : blue;
+    font-size: 35px;
+    margin-left : 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.adminFlex{
+    flex : 1;
+}
+
+nav button{
+    width : 130px;
+    margin-top : 7%;
+    color : white;
+    border-radius : 50px;
+    background-color : rgb(60, 63, 207);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media only screen and (min-width: 768px){
+
+    .adminLoginbody{
+        background-color : white; 
+        margin-left : 30%;
+        margin-right : 30%;
+    }
+    
+    .adminLoginbody header {
+        margin-left : 40%;
+        padding-top : 5%;
+        margin-bottom: 11%;
+        font-size : 25px;
+        color : orange;
+    }
+    
+    .adminLoginbody label{
+        font-size : 20px;
+        margin-left : 4%;
+        font-weight : bold;
+    }
+    
+    .adminLoginbody input {
+        width: 90%;
+        height: 50px;
+        margin-left : 4%;
+        margin-right : 4%;
+        margin-bottom: 3%;
+    }
+    
+    .adminLoginbody button {
+        width: 90%;
+        height : 30%;
+        margin-left : 4%;
+        margin-right : 4%;
+        margin-top : 2%;
+        margin-bottom : 1%;
+        background-color : blue;
+    }
+    
+    .adminLoginbody form div {
+        margin-left : 4%;
+        margin-top : 2%;
+    }
+}

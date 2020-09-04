@@ -1,0 +1,248 @@
+/* css for banner mobile  */
+  .banner img{
+    width : 100%; 
+    height : 150px;
+  }
+
+  .productImage{
+    width: 220px;
+    height : 220px;
+  }
+
+  .arrival-layout {
+    margin-top : 1%;
+     margin-left: 0;
+    margin-right : 0;
+  }
+
+  /* .mobile {
+    display : flex;
+  } */
+
+.arrivalName{
+    margin-top: 1%;
+    border-top-left-radius : 10px;
+    border-top-right-radius : 10px;
+    color : white;
+    padding-left : 15px;
+    margin-bottom : 3px;
+    background-color : rgba(0, 0, 255, 0.637);
+    font-size : 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight : bold;
+  }
+
+  .home-row-desktop{
+    display : none;
+  }
+
+  .home-row-mobile{
+    background-color : white;
+    display  : flex;
+  }
+
+  .home-row-mobile .col-6 div img {
+    width : 100%;
+     height : 170px
+  }
+
+  .col-6{
+    margin-bottom : 2%;
+  }
+
+  .tags{
+    font-size : 15px;
+    font-family : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left : 10px;
+  }
+
+  .cloth-row-desktop {
+    margin-top : 5px;
+    display : none;
+   }
+
+   .cloth-row-mobile {
+     margin-top : 10px;
+     display :  block;
+
+    }
+
+  .cloth-row-mobile .col-6 div img {
+    width : 100%;
+    height : 170px;
+  }
+
+  .addToCart {
+    cursor: pointer;
+    padding-left : 30%;
+    padding-right : 0;
+    color : white;
+    background-color: rgba(0, 132, 255, 0.397);
+    font-family : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius : 5px; 
+    text-underline-position : none;
+  }
+  
+  .addToCart:active{
+    background-color: black;
+    text-decoration : none;
+  }
+
+
+  .modalImage{
+    width : 100%;
+    height : 250px;
+  }
+
+  .modalDesign{
+    font-size : 25px;
+    font-weight: bolder;
+    margin-left : 7%;
+  }
+
+  .modalExtra {
+    font-size : 17px;
+    font-weight: bold;
+    margin-left : 7%;
+  }
+
+  .sizeandDescription{
+    font-size : 17px;
+    margin-left : 7%;
+  }
+
+  .modalfooter{
+    margin-left : 40%;
+  }
+
+  .closefooter{
+    background-color : red;
+    border-radius : 10px;
+    margin-right : 5%;
+    color : white;
+    border : 1px solid red;
+  }
+
+  .add-to-cart {
+    background-color : green;
+    border-radius : 10px;
+    margin-right : 5%;
+    color : white;
+    border : 1px solid green;
+  }
+
+  .displaysize {
+    color : orange;
+  }
+
+  .sizeButton {
+    color : white;
+    background-color : orange;
+    cursor: pointer;
+  }
+
+  .displaySizeError {
+      font-size : 12px;
+      color : red;
+  }
+  
+  
+  @media only screen and (min-width: 760px){
+
+    .home-banner{
+      margin-left : 10%;
+      margin-right : 10%;
+      margin-top : 1%;
+    }
+
+    .modalfooter{
+      margin-left : 60%;
+    }
+
+    .arrival-layout{
+      margin-top : 1%;
+      margin-left : 1%;
+      margin-right : 1%;
+    }
+    .banner img{
+      width : 100%; 
+      height : 250px;
+    }
+  
+  .arrivalName{
+      margin-top: 1%;
+      border-top-left-radius : 10px;
+      border-top-right-radius : 10px;
+      color : white;
+      padding-left : 15px;
+      margin-bottom : 3px;
+      background-color : rgba(0, 0, 255, 0.637);
+      font-size : 30px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-weight : bold;
+    }
+    
+    
+
+    .home-row-desktop{
+      max-width: 100%;
+      background-color : white;
+      display : block;
+    } 
+
+    .home-row-desktop .col-3 div img {
+      width : 100%;
+      height : 195px;
+    }
+  
+    .home-row-mobile{
+      display : none;
+    }
+    
+    .col-3{
+      margin-bottom : 2%;
+    }
+  
+    .addToCart {
+      padding-left : 30%;
+      padding-right : 30%;
+      color : white;
+      background-color: rgba(0, 132, 255, 0.397);
+      font-family : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      border-radius : 5px; 
+      text-underline-position : none;
+    }
+    
+    .addToCart:hover{
+      background-color: black;
+      text-decoration : none;
+    }
+
+    .cloth-row-desktop {
+      background-color : white;
+      margin-top : 5px;
+      display : flex;
+     }
+  
+     .cloth-row-mobile {
+       display : none;
+     }
+
+     .cloth-row-desktop .col-3 div img {
+      width : 100%;
+      height : 190px;
+    }
+
+    @media only screen and (min-width: 1025px){
+
+      .arrival-layout{
+        margin-top : 1%;
+        margin-left : 10%;
+        margin-right : 10%;
+      }
+
+      .cloth-row-mobile { display : none;}
+
+    }
+  
+  }  

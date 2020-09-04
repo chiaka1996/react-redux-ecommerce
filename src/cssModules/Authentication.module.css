@@ -1,0 +1,231 @@
+/* css for mobile login */
+.authbody{
+    /* background-color:  rgba(211, 211, 211, 0.089); */
+    background-color : white;
+}
+
+.errorMessage p{
+    color : red;
+    margin-left : 4%;
+    margin-bottom : 0;
+}
+
+.modalLogin{
+    color : orange;
+}
+
+.loginbody{
+        background-color : white;
+        margin-left : 0;
+        margin-right : 0;
+        margin-bottom : 0;
+
+}
+
+.loginbody header {
+    margin-left : 40%;
+    padding-top : 5%;
+    margin-bottom: 11%;
+    font-size : 25px;
+    color : orange;
+}
+
+.loginbody label{
+    font-size : 20px;
+    margin-left : 4%;
+    font-weight : bold;
+}
+
+.loginbody input {
+    width: 90%;
+    height: 50px;
+    margin-left : 4%;
+    margin-right : 4%;
+    margin-bottom: 3%;
+    border-radius : 0;
+    outline-color: lightblue;
+}
+
+.loginbody button {
+    width: 90%;
+    height : 30%;
+    margin-left : 4%;
+    margin-right : 4%;
+    margin-top : 2%;
+    margin-bottom : 1%;
+    background-color : orange;
+    border-radius : 50px;
+}
+
+.loginbody form div {
+    margin-left : 4%;
+    margin-top : 2%;
+}
+
+.loginbody form div span {
+    color : orange;
+}
+
+
+/* css for create account mobile */
+
+ .createAccountBody{
+    background-color : white;
+
+}
+
+.createAccountBody header {
+    margin-left : 25%;
+    padding-top : 5%;
+    margin-bottom: 11%;
+    font-size : 25px;
+    color : orange;
+}
+
+.createAccountBody label{
+    font-size : 20px;
+    margin-left : 4%;
+    font-weight : bold;
+}
+
+.createAccountBody input {
+    width: 90%;
+    height: 50px;
+    margin-left : 4%;
+    margin-right : 4%;
+    margin-bottom: 3%;
+    border-radius : 0;
+    border : 1px solid grey;
+    outline-color: lightblue;
+}
+
+
+ .createAccountBody button {
+    width: 90%;
+    height : 30%;
+    margin-left : 4%;
+    margin-right : 4%;
+    margin-top : 2%;
+    margin-bottom : 1%;
+    background-color : orange;
+    border-radius : 50px;
+}
+
+.createAccountBody form div {
+    margin-left : 4%;
+    margin-top : 2%;
+}
+
+ .createAccountBody form div span {
+    color : orange;
+}
+
+
+/* .createAccountBody{
+    background-color : white;
+    display : none;
+} */
+
+@media only screen and (min-width: 768px){
+
+    /* css for login desktop */
+    .loginbody{
+        background-color : white; 
+        margin-left : 30%;
+        margin-right : 30%;
+    }
+    
+    .loginbody header {
+        margin-left : 40%;
+        padding-top : 5%;
+        margin-bottom: 11%;
+        font-size : 25px;
+        color : orange;
+    }
+    
+    .loginbody label{
+        font-size : 20px;
+        margin-left : 4%;
+        font-weight : bold;
+    }
+    
+    .loginbody input {
+        width: 90%;
+        height: 50px;
+        margin-left : 4%;
+        margin-right : 4%;
+        margin-bottom: 3%;
+    }
+    
+    .loginbody button {
+        width: 90%;
+        height : 30%;
+        margin-left : 4%;
+        margin-right : 4%;
+        margin-top : 2%;
+        margin-bottom : 1%;
+        background-color : orange;
+    }
+    
+    .loginbody form div {
+        margin-left : 4%;
+        margin-top : 2%;
+    }
+    
+    .loginbody form div span {
+        color : orange;
+    }
+    
+    
+    /* css for create account desktop */
+    
+     .createAccountBody{
+        background-color : white;
+        margin-left : 30%;
+        margin-right : 30%;
+    
+    }
+    
+    .createAccountBody header {
+        margin-left : 25%;
+        padding-top : 5%;
+        margin-bottom: 11%;
+        font-size : 25px;
+        color : orange;
+    }
+    
+    .createAccountBody label{
+        font-size : 20px;
+        margin-left : 4%;
+        font-weight : bold;
+    }
+    
+    .createAccountBody input {
+        width: 90%;
+        height: 50px;
+        margin-left : 4%;
+        margin-right : 4%;
+        margin-bottom: 3%;
+    }
+    
+     .createAccountBody button {
+        width: 90%;
+        height : 30%;
+        margin-left : 4%;
+        margin-right : 4%;
+        margin-top : 2%;
+        margin-bottom : 1%;
+        background-color : orange;
+    }
+    
+    .createAccountBody form div {
+        margin-left : 4%;
+        margin-top : 2%;
+    }
+    
+     .createAccountBody form div span {
+        color : orange;
+    }
+
+
+}
