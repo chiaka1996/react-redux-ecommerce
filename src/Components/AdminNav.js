@@ -4,11 +4,12 @@ import {Link} from 'react-router-dom';
 
 const AdminNav = (props) => {
     return (
-        <nav>
+        <nav style={{width:'100%'}}>
         <div className="adminPanel">Admin Panel</div>
         <div className='adminFlex'> </div>
         
-        <Link to ={props.link}><button style={{backgroundColor : props.color}}>{props.name}</button></Link>
+        <Link to='/allorders'><button style={{backgroundColor:'lightgreen', color:'white'}} className='orderButton'>Orders</button></Link>
+        <Link to ={props.link}><button style={{backgroundColor : props.color}} className='add-exit-button'>{props.name}</button></Link>
             </nav>
     );
 }

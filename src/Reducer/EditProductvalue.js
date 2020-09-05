@@ -1,8 +1,8 @@
-const DeleteMessage = (state = '', action) => {
+const EditProductvalue = (state = '', action) => {
    
     switch(action.type){
 
-         case 'UPDATEDELETEMESSAGE' :
+         case 'SETEDITPRODUCTVALUE' :
              return action.payload
              
              default : 
@@ -10,4 +10,4 @@ const DeleteMessage = (state = '', action) => {
      }
 }
 
-export default DeleteMessage;
+export default EditProductvalue;

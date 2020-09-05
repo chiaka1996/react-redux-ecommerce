@@ -8,7 +8,7 @@ import LoginUsers from './LoginUsers';
 import LoginProfile from './LoginProfile';
 import ToggleProfileOrder from './ToggleProfileOrder.js';
 import ShoesForSale from './ShoesForSale.js';
-import DeleteMessage from './SetDeleteMessage.js';
+import EditProductvalue from './EditProductvalue.js';
 import { combineReducers } from 'redux';
 
 const allReducers = combineReducers ({
@@ -22,7 +22,7 @@ const allReducers = combineReducers ({
     LoginProfile,
     ToggleProfileOrder,
     ShoesForSale,
-    DeleteMessage 
+    EditProductvalue
 }); 
 
 export default allReducers;

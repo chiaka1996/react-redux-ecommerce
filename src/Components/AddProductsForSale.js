@@ -2,7 +2,7 @@
 /* eslint-disable eqeqeq */
  import React, {useState, useEffect} from 'react';
  import {useSelector, useDispatch } from 'react-redux';
- import { addClothForSale } from '../Action'; 
+ import { addClothForSale, addShoesForSale } from '../Action'; 
  import axios from 'axios';
  import '../App.css';
  import AdminNav from './AdminNav';
@@ -14,7 +14,11 @@
 
     const EditIndex = useSelector(state => state.EditDeleteProductIndex);
 
-    const products = useSelector(state => state.clothsForSale);
+    const clothsforsale = useSelector(state => state.clothsForSale);
+    const shoesforsale = useSelector(state => state.ShoesForSale);
+    const editproductvalue = useSelector(state => state.EditProductValue);
+
+    const products = editproductvalue === 'cloths' ? clothsforsale : shoesforsale ;
 
     const [image, setImage] = useState(EditIndex != null ? products[EditIndex].image : ''); 
 
@@ -27,8 +31,6 @@
     const [message, setMessage] = useState('');
 
     const quantity = 1;
-
-    const status = false;
 
     const [description, setDescription] = useState(EditIndex != null ? products[EditIndex].description : '');
 
@@ -45,9 +47,16 @@
 
     }
 
+    const shoeProduct = async () => {
+        let response = await axios.get("https://protected-retreat-10926.herokuapp.com/apis/getshoeproduct");
+   let { data} = response;
+   dispatch(addShoesForSale(data));
+    }
+
     useEffect (
          () => {
          getProduct();
+         shoeProduct();
         },[message]);
 
     //if the input changes
@@ -99,7 +108,6 @@
             design,
             price,
             size,
-            status,
             productType,
             quantity,
             availableQuantity,
@@ -110,7 +118,6 @@
             image,
             design,
             price,
-            status,
             productType,
             size,
             quantity,
@@ -120,13 +127,26 @@
     }
 
     if(EditIndex != null){
-        axios.put('https://protected-retreat-10926.herokuapp.com/apis/editproduct', data)
+        
+        if(productType === 'cloths'){
+            axios.put('https://protected-retreat-10926.herokuapp.com/apis/editproduct', data)
         .then(
             (res) => {
-                setMessage(res.data);
+                setMessage(res.data.message);
             
             }
         )
+        }
+        else{
+            axios.post('https://protected-retreat-10926.herokuapp.com/apis/editshoeproduct', data)
+            .then(
+                (res) => {
+                    setMessage(res.data.message);
+                
+                }
+            )
+        }
+        
     }
     else{
 
@@ -176,7 +196,7 @@
             <select max-width='100%' name='type' value={productType} onChange={onchangeType}>
                 <option></option>
                 <option value='cloths' >cloths</option>
-                <option value='shoes'>Shoes</option>
+                <option value='shoes'>shoes</option>
             </select>
              </div> <br/> 
 

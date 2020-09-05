@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import '../cssModules/AdminHome.css';
-import { useSelector} from 'react-redux';
 import Modal from "react-bootstrap/Modal";
 import ModalBody from "react-bootstrap/ModalBody";
 import ModalHeader from "react-bootstrap/ModalHeader";
@@ -17,6 +16,7 @@ function AdminHome() {
     
     <div className="AdminHome">
       <AdminNav name='Add Products' color='blue' link='/addforsale' />
+
       <AllProductsForSale name='cloths' />
       <div style={{marginTop:'5%'}}></div>
       <AllProductsForSale name='shoes' />

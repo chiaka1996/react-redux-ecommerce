@@ -9,6 +9,7 @@ import AddForSale from './Components/AddProductsForSale';
 import AdminHome from './Components/AdminHome';
 import Auth from './Components/Authentication';
 import userProfile from './Components/Userprofile';
+import AllOrders from './Components/AllOrders';
 import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom'; 
 import './App.css';
@@ -59,6 +60,7 @@ const getShoeProduct = async () => {
         <Route path = "/addforsale" component = {AddForSale} />
         <Route path = "/adminHome" component = {AdminHome} />
         <Route path = "/userprofile" component = {userProfile} />
+        <Route path = "/allorders" component ={AllOrders} />
       </div>
     </Router>
   

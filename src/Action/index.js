@@ -123,11 +123,10 @@ export const RemoveAllCartProducts = (prod) => {
     }
 }
 
-//update dellete messege in the admin panel
-export const UpdateDeleteMessaage = (msg) => {
+//edit product name. sets the the edit product to either cloths or shoes in the admin panel
+export const EditProductValue = (val) => {
     return {
-        type : 'UPDATEDELETEMESSAGE',
-        payload : msg
+        type : 'SETEDITPRODUCTVALUE',
+        payload : val
     }
 }
-

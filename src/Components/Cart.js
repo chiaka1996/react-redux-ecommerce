@@ -47,6 +47,7 @@ const Cart = () => {
       phone : loginCheck ? loginProfile.phone :  '',
       address: loginCheck ? loginProfile.address :  '',
       total : loginCheck ? cartTotal() :  '',
+      status : false,
       order : loginCheck ? ProductsInCart :  []
      });
 
@@ -65,6 +66,7 @@ const Cart = () => {
           phone : loginProfile.phone,
           address : loginProfile.address,
            total :  cartTotal(),
+           status : false,
           order : ProductsInCart
         });
         
@@ -88,7 +90,6 @@ const Cart = () => {
             }
         ) 
 
-        // dispatch(RemoveAllCartProducts(0));
     }
 
     const continueShopping = () => {

@@ -54,7 +54,7 @@ font-size : 22px;
 }
 
 .adminLoginbody input {
-    width: 90%;
+    max-width: 90%;
     height: 50px;
     margin-left : 4%;
     margin-right : 4%;
@@ -90,7 +90,7 @@ nav{
 
 .adminPanel{
     color : blue;
-    font-size: 35px;
+    font-size: 23px;
     margin-left : 25px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -99,10 +99,11 @@ nav{
     flex : 1;
 }
 
-nav button{
-    width : 130px;
+ nav button{
+    width : 90px;
     margin-top : 7%;
     color : white;
+    font-size : 12px; 
     border-radius : 50px;
     background-color : rgb(60, 63, 207);
     font-family: 'Times New Roman', Times, serif;
@@ -151,5 +152,22 @@ nav button{
     .adminLoginbody form div {
         margin-left : 4%;
         margin-top : 2%;
+    }
+
+    .adminPanel{
+        color : blue;
+        font-size: 35px;
+        margin-left : 25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    nav button{
+        width : 130px;
+        font-size : 18px; 
+        margin-top : 7%;
+        color : white;
+        border-radius : 50px;
+        background-color : rgb(60, 63, 207);
+        font-family: 'Times New Roman', Times, serif;
     }
 }
