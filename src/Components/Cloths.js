@@ -10,7 +10,7 @@ import Banner from './Banner.js';
 import Nav from './Nav';
 import { useHistory } from "react-router-dom"; 
 
-const Cloths = () => {
+const Cloths = () => { 
  
     let history = useHistory();
     const clothsForSale = useSelector (state => state.clothsForSale);

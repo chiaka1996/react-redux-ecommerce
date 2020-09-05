@@ -1,8 +1,8 @@
-const clothsForSale = (state = [], action) => {
+const DeleteMessage = (state = '', action) => {
    
     switch(action.type){
 
-         case 'ADDPRODUCTFORSALE' :
+         case 'UPDATEDELETEMESSAGE' :
              return action.payload
              
              default : 
@@ -10,4 +10,4 @@ const clothsForSale = (state = [], action) => {
      }
 }
 
-export default clothsForSale;
+export default DeleteMessage;

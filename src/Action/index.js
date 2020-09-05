@@ -123,3 +123,11 @@ export const RemoveAllCartProducts = (prod) => {
     }
 }
 
+//update dellete messege in the admin panel
+export const UpdateDeleteMessaage = (msg) => {
+    return {
+        type : 'UPDATEDELETEMESSAGE',
+        payload : msg
+    }
+}
+

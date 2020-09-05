@@ -2,6 +2,8 @@
   max-width : 100%;
     /* height : 80px; */
     float : none;
+    /* position : fixed;
+    z-index: 2; */
 }
 .navigationLink{
   width : 100%;
@@ -9,7 +11,7 @@
 } 
 
 .bars{
-  display : block;
+  display : block; 
   margin-top: 3%;
    margin-left : 3%;
 }

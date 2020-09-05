@@ -11,6 +11,7 @@ function Home() {
       <div className='home-banner'><Banner /></div>
       <NewArrivals name ='Cloths' />
       <NewArrivals name='Shoes' />
+      
     </div>
   );
 }

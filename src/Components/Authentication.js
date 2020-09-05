@@ -2,13 +2,13 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-useless-escape */
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import auth from '../cssModules/Authentication.module.css';
 import Modal from "react-bootstrap/Modal";
 import ModalBody from "react-bootstrap/ModalBody";
 import 'bootstrap/dist/css/bootstrap.css';
 import { useHistory } from "react-router-dom";
-import {useDispatch } from 'react-redux';
+import {useSelector, useDispatch } from 'react-redux';
 import { LoginCheck, LoginProfile} from '../Action';
 import axios from 'axios';
 import Nav from './Nav';
@@ -18,6 +18,8 @@ const Authentication = () => {
 
     let history = useHistory();
     const dispatch = useDispatch();
+
+    const userStatus = useSelector (state => state.LoginUsers);
 
     const nameRegex = /^[a-z ?a-z]+/gi;
 
@@ -51,6 +53,12 @@ const Authentication = () => {
         address : '',
         password : ''
     });
+
+    useEffect(()=> {
+        if(userStatus){
+            setShowModal(true);
+        }
+    })
 
 
     const onchangeLoginDetails = (e) => {
@@ -225,6 +233,7 @@ const Authentication = () => {
     return (
         <div>
         <Nav />
+
 <div className={auth.authbody}>
         {/* ternary operator to change display from login to create account */}
     { authView ? 
@@ -307,6 +316,7 @@ const Authentication = () => {
     }
 
 </div>
+        
 </div>
     )
 }
