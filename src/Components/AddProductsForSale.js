@@ -201,7 +201,7 @@
 
             <div className = "col-sm-3">
                <label>Product type</label><br/>
-            <select max-width='100%' name='type' value={productType} onChange={onchangeType}>
+            <select max-width='100%' name='type' value={productType} onChange={onchangeType} required>
                 <option></option>
                 <option value='cloths' >cloths</option>
                 <option value='shoes'>shoes</option>
@@ -211,33 +211,33 @@
 
             <div className = "addImage col-sm-3">
                <label>Add image url</label><br/>
-            <input type="text" name="image" value={image} onChange = {onchangeImage}/>
+            <input type="text" name="image" value={image} onChange = {onchangeImage} required/>
              </div> <br/> 
 
             <div className="col-sm-3">
             <label>Name Of Product</label>
-            <input type="text" className = "inputs" value={design} name = "design" onChange = {onchangeDesign} />
+            <input type="text" className = "inputs" value={design} name = "design" onChange = {onchangeDesign} required/>
             </div>
 
             <div className="col-sm-3">
             <label>Price</label>
-            <input type="number" className = "inputs" value={price} name = "price" onChange = {onchangePrice}/>
+            <input type="number" className = "inputs" value={price} name = "price" onChange = {onchangePrice} required/>
             </div><br/>
             </div>
 
             <div className="row">
                 <div className="col-sm-4">
                     <label>Size</label><br />
-                    <input type="text" name="size" value={size} onChange = {onchangeSize} />
+                    <input type="text" name="size" value={size} onChange = {onchangeSize}  required/>
                 </div>
 
                 <div className='col-sm-4'>
                     <label>Available Quantity</label>
-                    <input type="number" name="availableQuantity" value={availableQuantity} onChange = {onchangeAvailable} />
+                    <input type="number" name="availableQuantity" value={availableQuantity} onChange = {onchangeAvailable} required />
                 </div><br/>
 
                 <div className='col-sm-4'>
-                <textarea id = "myTextArea" rows = "3" cols = "50" value={description} name="description" onChange={onchangeDescription}>Description</textarea>
+                <textarea id = "myTextArea" rows = "3" cols = "50" value={description} name="description" onChange={onchangeDescription} required>Description</textarea>
                 </div>
             </div>
             <button type="submit" className="submitButton"  onClick = {submit} > {EditIndex != null ? 'Update Product' : 'Enter Product'}</button>

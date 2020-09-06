@@ -166,13 +166,13 @@ const UserProfile = () => {
                     <div className='listrow'>
                         <div className='listnames1'>
                         <p>Username</p>
-                        { !editProfile ? <input type='text' name='username' value={editedProfileDetails.username} onChange={onChangeInput} className='inputEdit' /> : <span>{editedProfileDetails.username}</span> }
+                        { !editProfile ? <input type='text' name='username' value={editedProfileDetails.username} className='inputEdit' /> : <span>{editedProfileDetails.username}</span> }
                        
                         </div>
 
                         <div className='listnames2'>
                         <p>Email</p>
-                        { !editProfile ? <input type='text' name='email' value={editedProfileDetails.email} onChange={onChangeInput} className='inputEdit' /> : <span>{editedProfileDetails.email}</span> }
+                        { !editProfile ? <input type='text' name='email' value={editedProfileDetails.email} className='inputEdit' /> : <span>{editedProfileDetails.email}</span> }
                        
                         </div>                    
                     </div>
