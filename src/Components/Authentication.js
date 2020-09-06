@@ -247,10 +247,10 @@ const Authentication = () => {
 
             <form>
                 <label> Email</label><br/>
-                <input type="email" name="email"  placeholder="chikajunior19@gmail.com" onChange={onchangeLoginDetails} /> <br/>
+                <input type="email" name="email"  placeholder="chikajunior19@gmail.com" onChange={onchangeLoginDetails} required /> <br/>
 
                 <label>Password</label><br />
-                <input type="password" name="password" onChange={onchangeLoginDetails} /><br/>
+                <input type="password" name="password" onChange={onchangeLoginDetails}  required/><br/>
 
                 <button onClick={submitLoginDetails}>Login</button><br/>
                 <div>don't have an account ? <span onClick = {changeView}>create account</span></div>
@@ -277,30 +277,30 @@ const Authentication = () => {
             <form>
 
                 <label>First Name</label><br/>
-                <input type="text" name="firstname" placeholder="chioma" onChange={onchangeSignupDetails} /><br/>
+                <input type="text" name="firstname" placeholder="chioma" onChange={onchangeSignupDetails}  required/><br/>
 
                 <label>Last Name</label><br/>
-                <input type="text" name="lastname" placeholder="Adekunle" onChange={onchangeSignupDetails} /><br/>
+                <input type="text" name="lastname" placeholder="Adekunle" onChange={onchangeSignupDetails}  required/><br/>
 
                 <label>Username</label><br/>
-                <input type="text" name="username" placeholder="chi21" onChange={onchangeSignupDetails} /><br/>
+                <input type="text" name="username" placeholder="chi21" onChange={onchangeSignupDetails}  required/><br/>
 
 
                 <label>Phone Number</label><br/>
-                <input type="number" name="phone" placeholder="07085408623" onChange={onchangeSignupDetails} /><br/>
+                <input type="number" name="phone" placeholder="07085408623" onChange={onchangeSignupDetails} required/><br/>
 
                 <label>Email</label>
-                <input type="email" name="email" placeholder="chikajunior19@gmail.com" onChange={onchangeSignupDetails} /><br/>
+                <input type="email" name="email" placeholder="chikajunior19@gmail.com" onChange={onchangeSignupDetails} required/><br/>
 
 
                 <label>State</label>
-                <input type="text" name="state" placeholder="Lagos" onChange={onchangeSignupDetails} /><br/>
+                <input type="text" name="state" placeholder="Lagos" onChange={onchangeSignupDetails}  required/><br/>
 
                 <label>Home Address</label>
-                <input type="text" name="address" placeholder="1, adeniran street,yaba, Lagos" onChange={onchangeSignupDetails} /><br/>
+                <input type="text" name="address" placeholder="1, adeniran street,yaba, Lagos" onChange={onchangeSignupDetails}  required/><br/>
 
                 <label>Password</label><br/>
-                <input type="password" name="password" placeholder="should be 7 or more characters" onChange={onchangeSignupDetails} /><br/>
+                <input type="password" name="password" placeholder="should be 7 or more characters" onChange={onchangeSignupDetails}  required/><br/>
 
                 <button onClick={submitSignupDetails}>Create Account</button><br/>
                 <div>Already have an account? <span onClick={changeView}>Login</span></div>
