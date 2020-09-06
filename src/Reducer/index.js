@@ -9,6 +9,7 @@ import LoginProfile from './LoginProfile';
 import ToggleProfileOrder from './ToggleProfileOrder.js';
 import ShoesForSale from './ShoesForSale.js';
 import EditProductvalue from './EditProductvalue.js';
+import AdminLogin from './AdminLogin.js'
 import { combineReducers } from 'redux';
 
 const allReducers = combineReducers ({
@@ -22,7 +23,8 @@ const allReducers = combineReducers ({
     LoginProfile,
     ToggleProfileOrder,
     ShoesForSale,
-    EditProductvalue
+    EditProductvalue,
+    AdminLogin
 }); 
 
 export default allReducers;

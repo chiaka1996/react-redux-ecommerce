@@ -130,3 +130,11 @@ export const EditProductValue = (val) => {
         payload : val
     }
 }
+
+//check if the admin is logged in or not
+export const AdminCheck = (val) => {
+    return {
+        type : 'CHECKIFTHEADMINISLOGGEDIN',
+        payload : val
+    }
+}

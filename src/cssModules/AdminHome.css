@@ -90,8 +90,8 @@ nav{
 
 .adminPanel{
     color : blue;
-    font-size: 23px;
-    margin-left : 25px;
+    font-size: 19px;
+    margin-left : 2px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -99,8 +99,15 @@ nav{
     flex : 1;
 }
 
+.navLogout{
+    color : white;
+    background-color: orangered;
+    font-size: 12px;
+   
+}
+
  nav button{
-    width : 90px;
+    width : 80px;
     margin-top : 7%;
     color : white;
     font-size : 12px; 
@@ -169,5 +176,9 @@ nav{
         border-radius : 50px;
         background-color : rgb(60, 63, 207);
         font-family: 'Times New Roman', Times, serif;
+    }
+
+    .navLogout{
+        font-size : 18px; 
     }
 }
