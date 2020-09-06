@@ -124,7 +124,7 @@ const Shoes = () => {
     <div className='row'>
   
   { clothsForSale.map((cloths, index) => 
-     index < 2 ? <div key={index}   className = "col-6"> 
+     <div key={index}   className = "col-6"> 
        <div>
     <img src ={cloths.image} alt="cloths" />
     </div>
@@ -138,7 +138,7 @@ const Shoes = () => {
 
           
   
-  </div> : ''
+  </div> 
    )
    }
     </div>
