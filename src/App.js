@@ -8,19 +8,25 @@ import SideBar from './Components/SideBar';
 import AddForSale from './Components/AddProductsForSale'; 
 import AdminHome from './Components/AdminHome';
 import Auth from './Components/Authentication';
-import userProfile from './Components/Userprofile';
+import UserProfile from './Components/Userprofile';
+import Newsletter from './Components/Newsletter';
 import AllOrders from './Components/AllOrders';
+import Footer from './Components/Footer';
+import Checkout from './Components/Checkout';
+import Nav from './Components/Nav';
+import Profiledetails from './Components/Profiledetails';
+import Changepassword from './Components/ChangePassword';
 import 'bootstrap/dist/css/bootstrap.css';
-import {BrowserRouter as Router, Route} from 'react-router-dom'; 
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'; 
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addClothForSale, addShoesForSale } from './Action'; 
 import axios from 'axios';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faApple} from '@fortawesome/free-brands-svg-icons'
-import {faCartPlus, faUser, faBars, faHome, faShoePrints, faTshirt, faTrashAlt, faPen} from '@fortawesome/free-solid-svg-icons'
+import { faApple, faFacebookF, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import {faBars, faTrashAlt, faPen, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faApple, faCartPlus, faUser, faBars, faHome, faShoePrints, faTshirt, faTrashAlt, faPen);
+library.add(faApple, faEnvelope, faBars, faTrashAlt, faPen, faFacebookF, faTwitter, faInstagram);
 
 function App() {
   const sidebartoggle = useSelector(state => state.SideBarToggle);
@@ -50,17 +56,27 @@ const getShoeProduct = async () => {
   
   return (
     <Router>
+      
       <div className ="body">
-        <SideBar sidebar={sidebartoggle}  />
-        <Route path = "/" exact component = {Home} />
-        <Route path = "/cloths" component = {Cloths}/>
-        <Route path="/auth" component={Auth} />
-        <Route path = "/shoes" component = {Shoes}/>
-        <Route path = "/cart" component = {Cart}/>
-        <Route path = "/addforsale" component = {AddForSale} />
-        <Route path = "/adminHome" component = {AdminHome} />
-        <Route path = "/userprofile" component = {userProfile} />
-        <Route path = "/allorders" component ={AllOrders} />
+        <Nav />     
+        <SideBar sidebar={sidebartoggle}/>
+        <Routes>
+        <Route path = "/" exact element = {<Home />} />
+        <Route path = "/cloths" element = {<Cloths />}/>
+        <Route path="/auth" element={<Auth />} />
+        <Route path = "/shoes" element = {<Shoes />}/>
+        <Route path = "/cart" element = {<Cart />}/>
+        <Route path = "/checkout" element = {<Checkout />} />
+        <Route path = "/addforsale" element = {<AddForSale />} />
+        <Route path = "/adminHome" element = {<AdminHome />} />
+        <Route path = "/profile" element = {<UserProfile />} />
+        <Route path = "/allorders" element ={<AllOrders />} />
+        <Route path = "/profile/details" element = {<Profiledetails />} />
+        <Route path = "/profile/change_password" element = {<Changepassword />} />
+        <Route path = "/profile/newsletter" element = {<Newsletter />} />
+
+        </Routes>
+        <Footer />
       </div>
     </Router>
   

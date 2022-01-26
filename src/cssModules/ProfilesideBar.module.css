@@ -1,0 +1,23 @@
+.grid1{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.grid1 div{
+    padding: 5% 0 5% 7%;
+    font-size: 14px;
+}
+
+.grid1 div:hover{
+    background-color: lightgrey;
+}
+
+.grid1 div span{
+    margin-left: 5%;
+}
+
+.greyBackground{
+    background-color: lightgrey;
+    font-weight: bold;
+}

@@ -2,19 +2,17 @@ import React,{useState, useEffect} from 'react';
 import AdminNav from './AdminNav';
 import axios from 'axios';
 import {useSelector} from 'react-redux';
-import { useHistory } from "react-router-dom";
-const AllOrders = () => {
-    
-    const history = useHistory();
+import { useNavigate } from "react-router-dom";
+
+const AllOrders = () => { 
+    const navigate = useNavigate();
     let loginCheck = useSelector(state => state.AdminLogin);
     const [allOrders, setAllOrders] = useState([]);
     const [enableRefresh, setEnableRefresh] = useState(false);
     
     const getAllOrders = async() => {
         let res = await axios.get("https://protected-retreat-10926.herokuapp.com/apis/getallorders");
-        console.log(res.data);
-        setAllOrders(res.data);
-    
+        setAllOrders(res.data);  
     }
 
     useEffect(()=>{
@@ -43,7 +41,11 @@ const AllOrders = () => {
         <div>
             {loginCheck ?
              <div>please, return to 
-            <span style={{color:'lightgreen'}} onClick={()=>history.push('/adminHome')}>Admin Home</span> and login</div> :
+            <span style={{color:'lightgreen'}} 
+            onClick={()=> navigate('/adminHome')}>
+            Admin Home</span> 
+            and login
+            </div> :
             <div>
             <AdminNav name='exit' color='blue' link='/adminHome' />
             <table className="table table-bordered table-dark" style={{maxWidth:'100%'}}>
@@ -66,7 +68,10 @@ const AllOrders = () => {
                 <tr key={i}>
                     <th scope='row'>{i + 1}</th>
                     <td>{ord.username}</td>
-                    <td><span>{ord.firstname}</span> <span>{ord.lastname}</span> </td>
+                    <td>
+                    <span>{ord.firstname}</span>
+                     <span>{ord.lastname}</span> 
+                     </td>
                     <td>
                         <tr>
                             <th>image</th>

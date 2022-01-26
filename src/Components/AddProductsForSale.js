@@ -6,12 +6,12 @@
  import axios from 'axios';
  import '../App.css';
  import AdminNav from './AdminNav';
- import { useHistory } from "react-router-dom";
+ import { useNavigate } from "react-router-dom";
 
 
  const AddProductForSale = () => {
 
-    const history = useHistory();
+    const navigate = useNavigate();
     let loginCheck = useSelector(state => state.AdminLogin);
     const dispatch = useDispatch();
 
@@ -191,7 +191,12 @@
 
             {loginCheck ?
              <div>please, return to 
-            <span style={{color:'lightgreen'}} onClick={()=>history.push('/adminHome')}>Admin Home</span> and login</div> :
+            <span style={{color:'lightgreen'}}
+             onClick={()=>navigate('/adminHome')}>
+                 Admin Home
+                 </span> 
+                 and login
+                 </div> :
             <div>
         <AdminNav name="exit" color='red' link='/adminHome' />
         <div className="productForm">

@@ -1,0 +1,86 @@
+.profileContainer{
+    display: grid;
+    grid-template-columns: 20% 78%;
+    width: 100%;
+    grid-column-gap: 2%;
+    padding: 0.5% 7%;
+}
+
+.grid2{
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 1%;
+    position: relative;
+}
+
+.pageHeader{
+    padding: 1% 0 1% 2%;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.detailsGrid{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+    padding: 5% 2%;
+    /* height: 100%; */
+}
+
+.subscribeContainer{
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
+.subcsribeHeader{
+    padding: 2% 0 2% 2%;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.radioContainer{
+padding: 5% 0;
+text-align: left;
+
+}
+
+.radioLabel{
+    display: inline-flex;
+    justify-content: left;
+    text-align: left;
+    margin: 0 0 5% 0;
+    padding: 0 0;
+}
+
+.radioInput{
+    display: inline-flex;
+    justify-content: left;
+    text-align: left;
+    margin: 0 0;
+    width: 30px;
+    color: red;
+}
+
+.radioLetter{
+    margin-top: -2.7%;
+}
+
+.submitBtn{
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+    background-color: rgb(248, 100, 100);
+    outline: none;
+    border: 1px solid white;
+    transition: all 0.5 ease;
+    padding: 1% 0;
+    border-radius: 5px;
+}
+
+.submitBtn:hover{
+    background-color: red;
+    transform: translateY(-5%);
+    transition: all 0.5 ease;
+}

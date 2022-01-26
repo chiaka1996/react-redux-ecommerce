@@ -74,7 +74,9 @@ const AllProductsForSale = (props) => {
         <td>{product.price}</td>
         <td>
           <div className='action'>
-          <Link to="/addforsale"><FontAwesomeIcon icon="pen" size="sm" color='blue' onClick={()=>onClickEdit(i)} /></Link>
+          <Link to="/addforsale">
+          <FontAwesomeIcon icon="pen" size="sm" color='blue' onClick={()=>onClickEdit(i)} />
+          </Link>
           <div className='actionFlex'></div>
           <FontAwesomeIcon icon="trash-alt" size="sm" color='red' value={i}  onClick={()=>onClickDelete(product._id)}/>
           </div>

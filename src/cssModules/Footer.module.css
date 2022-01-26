@@ -1,0 +1,233 @@
+/* for desktop view */
+.footerContainer{
+    margin-top: 2%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.newsLetter{
+    background-color: red;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2% 7% 2% 7%; 
+}
+
+.newsLetterHeader{
+    width: 30%;
+    font-size: 25px;
+    padding-bottom: 0;
+}
+
+.newsLetterSubHeader{
+    width: 33%;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.newsLetterInput{
+    width: 34%;
+    position: relative;
+}
+
+.footerInput{
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: 0.5px solid white;
+    padding-left: 5%;
+    font-size: 13px;
+}
+
+.subscribe{
+    position: absolute;
+    background-color: rgb(58, 57, 57);
+    text-align: center;
+    top: 0;
+    right: -2%;
+    width: 35%;
+    height: 45px;
+    padding-top: 2%;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+.footerMenu{
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    padding: 5% 7%;
+}
+
+.chiaka{
+    padding-top: 4%;
+    font-size: 22px;
+    font-weight: bolder;
+    color: red;
+    margin-bottom: 9%;
+}
+
+.contactNumber{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 7%;
+}
+
+.gotQuestion{
+    margin-left: 5%;
+    font-size: 14px;
+}
+
+.gotQuestion span{ 
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.gridItem{
+    background-color: rgb(248, 248, 248);
+}
+
+
+.subHeader{
+    color: rgb(58, 57, 57);
+    font-weight: bold;
+    font-size: 18px; 
+    margin: 0 0 10% 0;   
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 2% 1% 2% 0;
+}
+
+.footerMenu ul{
+    padding-left: 0;
+}
+
+.footerMenu ul li{
+    list-style-type: none;
+    font-size: 15px;
+    margin-bottom: 4%;
+}
+
+.payOnDelivery{
+    margin-bottom: 10%;
+}
+
+.payOnDelivery span{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.payOnDelivery div{
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.icons{
+    margin-right: 5%;
+}
+
+/* mobile design */
+@media only screen and (max-width: 800px){
+    .newsLetter{
+        display: block;
+        padding: 3% 4% 7% 4%;
+    }
+
+    .newsLetterHeader{
+        width: 100%;
+        padding-bottom: 3%;
+    }
+
+    .newsLetterSubHeader{
+        width: 100%; 
+        font-size: 15px;
+        margin-bottom: 3%;
+    }
+
+    .newsLetterInput{
+        width: 100%;
+    }
+
+    .footerMenu{
+        display: block;
+        padding: 5 4%;
+    }
+
+    .gotQuestion span{ 
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .payOnDelivery{
+        margin-bottom: 7%;
+    }
+
+    .payOnDelivery span{
+        font-size: 17px;
+    }
+
+    .payOnDelivery div{
+        font-size: 14px;
+    }
+
+    .subHeader{
+        margin: 10% 0 3% 0;
+        padding: 2% 1% 2% 3%;
+    }
+
+    .flexing{
+        flex: 1;
+    }
+    
+    .icon1, .icon1Cancel{
+        width: 10px;
+        cursor: pointer;
+        position: absolute;
+        color: black;
+        top: 50%;
+        right: 6%;
+    }
+    
+    .icon1::before, .icon1::after,
+    .icon1Cancel::before, .icon1Cancel::after{
+        content: "";
+        position: absolute; 
+        width: 10px;
+        height: 1px;
+        background: black;
+        top: 0px;
+        transition: transform 1s;
+    }
+    
+    .icon1::after {
+        transform: rotate(90deg);
+    }
+    
+    .icon1Cancel::before{
+        transform: rotate(135deg);
+    }
+    
+    .icon1Cancel::After{
+        transform: rotate(45deg);
+    }
+    
+
+    .footerMenu ul{
+        padding-left: 5%;
+    }
+
+    .gridItem{
+        background-color: white;
+    }
+
+    .displayList{
+        display: block;
+    }
+
+    .hideList{
+        display: none;
+    }
+
+}
+

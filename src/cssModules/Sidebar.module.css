@@ -1,41 +1,103 @@
-.sideContainer{
-    height : 100%;
+.sideContainer, .open{
+    /* height : 100vh; */
+    height: 100%;
     background-color : white;
-    box-shadow : 1px 0px 1px grey;
-    position : absolute;
+    position : fixed;
     top : 0;
     left : 0;
-    width : 70%;
+    width : 100%;
     z-index : 200;
     color : #000000;
-    transform: translateX(-100%);   
+    overflow-y: scroll;
+    border-right: 1px solid grey;   
+}
+
+.sideContainer{
+    transition : transform 0.5s ease-out;
+    transform: translateX(-100%);
 }
 
 .open{
     transition : transform 0.5s ease-out;
     transform : translateX(0); 
 }
-nav div header span {
+.header span {
     font-size : 24px;
     margin-left : 15px;
     margin-top : 5px;
 }
-nav div header div {
+.header div {
     flex : 1;
 }
 
-nav div header{
+.header{
     display : flex;
-    margin-bottom : 5%;
+    /* margin-bottom : 5%; */
+    background-color: #f53218;
+    color: white;
+    padding: 3% 5% 5% 3%;
 }
 
-.subnavs div {
-    margin-top: 10%;
-    margin-left : 10%;
+.subnavs .navList {
+    border-bottom: 2px solid lightgrey;
+    padding: 3% 5% 3% 7%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.subNavList{
+    border-bottom: 2px solid lightgrey;
+    padding: 3% 5% 3% 7%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.hideNavList{
+    display: none;
+}
+
+.flexing{
+    flex: 1;
+}
+
+.icon1, .icon1Cancel{
+    width: 5px;
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    top: 50%;
+    right: 6%;
+}
+
+.icon1::before, .icon1::after,
+.icon1Cancel::before, .icon1Cancel::after{
+    content: "";
+    position: absolute; 
+    width: 10px;
+    height: 1px;
+    background: black;
+    top: 0px;
+    transition: transform 1s;
+}
+
+.icon1::after {
+    transform: rotate(90deg);
+}
+
+.icon1Cancel::before{
+    transform: rotate(135deg);
+}
+
+.icon1Cancel::After{
+    transform: rotate(45deg);
 }
 
 .subnavs div span {
-    margin-left : 4%;
+    margin-left : 1%;
+    position: absolute;
+    top: 30%;
 }
 
 nav div div ul {
@@ -49,9 +111,32 @@ nav div div ul li {
 }
 
 .remover{
-    color : red;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 .sidelink{
     color : black;
+}
+
+.sideBarFooter{
+    display: grid;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100vh;
+    /* bottom: 0; */
+    grid-template-columns: auto auto auto;
+    background-color: #f53218;
+    color: white;
+    width: 100%;
+    padding: 5% 0 5% 0;
+}
+
+.sideBarFooter div{
+    text-align: center;
+}
+
+.sideBarFooter div span{
+    font-weight: bold;
 }

@@ -7,16 +7,14 @@ import auth from '../cssModules/Authentication.module.css';
 import Modal from "react-bootstrap/Modal";
 import ModalBody from "react-bootstrap/ModalBody";
 import 'bootstrap/dist/css/bootstrap.css';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {useSelector, useDispatch } from 'react-redux';
 import { LoginCheck, LoginProfile} from '../Action';
 import axios from 'axios';
-import Nav from './Nav';
-
  
 const Authentication = () => {
 
-    let history = useHistory();
+    let navigate = useNavigate();
     const dispatch = useDispatch();
 
     const userStatus = useSelector (state => state.LoginUsers);
@@ -111,7 +109,6 @@ const Authentication = () => {
             if(emailTest === false || password.length < 7) {
 
                 if (emailTest === false) {
-                    console.log(emailTest);
                     setErrorMessage((prevState)=>[...prevState, "invalid email"]);
                 }
 
@@ -231,10 +228,8 @@ const Authentication = () => {
     }
 
     return (
-        <div>
-        <Nav />
-
-<div className={auth.authbody}>
+    <div>
+    <div className={auth.authbody}>
         {/* ternary operator to change display from login to create account */}
     { authView ? 
     /* login form */
@@ -258,7 +253,7 @@ const Authentication = () => {
 
             <Modal show={showModal} onHide={() => false} keyboard={false} backdrop="static" centered>
                 <ModalBody>
-                {successMessage } <span onClick={() => history.goBack()} className={auth.modalLogin}>continue</span> shopping
+                {successMessage } <span onClick={() => navigate(-1)} className={auth.modalLogin}>continue</span> shopping
                 </ModalBody>
             </Modal> 
 

@@ -1,8 +1,8 @@
 //add products to cart
-export const addToCart = (addedCloth) => {
+export const addToCart = (addedProduct) => {
     return { 
         type : 'ADDTOCART',
-        payload : addedCloth
+        payload : addedProduct
     }
 }
 

@@ -1,8 +1,6 @@
 import React, {useState} from 'react' ;
 import '../cssModules/Home.css';
 import Carousel from 'react-bootstrap/Carousel';
-import image1 from '../images/image1.jpg';
-
 
 const Banner = () => {
     const [index, setIndex] = useState(0);
@@ -13,11 +11,12 @@ const Banner = () => {
 
     return (
         <div className='banner'>
+          <div className="bannerImage1">
         <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={image1}
+          src='https://res.cloudinary.com/chiaka1996/image/upload/v1640736091/generators_flgmq8.jpg'
           alt="First slide"
         />
       </Carousel.Item>
@@ -25,7 +24,7 @@ const Banner = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={image1}
+          src='https://res.cloudinary.com/chiaka1996/image/upload/v1640736102/samschris.jpg_BkU_nXIqF_tvwfya.jpg'
           alt="Second slide"
         />
       </Carousel.Item>
@@ -33,11 +32,28 @@ const Banner = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={image1}
+          src='https://res.cloudinary.com/chiaka1996/image/upload/v1640736081/desperado.jpg_BkoX219qF_gf0ekd.jpg'
           alt="Third slide"
         />
       </Carousel.Item>
     </Carousel>
+    </div>
+
+    <div className="bannerImage2">
+      <div style={{marginBottom: '4vh'}}> 
+      <img
+          src='https://res.cloudinary.com/chiaka1996/image/upload/v1640735813/flash_sales_ghprzw.png'
+          alt="fourth slide"
+        />
+      </div>
+
+      <div> 
+      <img
+          src='https://res.cloudinary.com/chiaka1996/image/upload/v1640735825/clearance_sale_wasoy3.jpg'
+          alt="fifth slide"
+        />
+        </div>
+      </div>
        </div>
     )
 }
