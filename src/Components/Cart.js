@@ -115,7 +115,7 @@ const Cart = () => {
   return (
     <div style={{backgroundColor: 'white'}}>
       <div className={Cartcss.cartHeader}>Shopping Cart</div>
-      {/* <span>{getProductInCart}</span> */}
+      <span>{getProductInCart}</span>
     { orderSuccessfull !== '' ? <div style={{backgroundColor:'lightgreen', color:'white'}}> 
     {orderSuccessfull}, we will be in contact. please, 
     <button onClick={continueShopping}  style={{color :'orange'}}>

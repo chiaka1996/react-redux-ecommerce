@@ -22,6 +22,7 @@ const Profiledetails = () => {
     const [Serror, setSerror] = useState('');
 
     const nameRegex = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/i
+    // eslint-disable-next-line no-useless-escape
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i
     const userRegex = /^[a-z]+[0-9]*/i;
     const stateRegex = /^[a-z]+/i

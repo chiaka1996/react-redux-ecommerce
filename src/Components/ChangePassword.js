@@ -1,29 +1,29 @@
-import React, {useState} from 'react';
+import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.css';
 import Profile from '../cssModules/Userprofile.module.css';
 import ProfilesideBar from './profileSideBar';
-import {LoginProfile} from '../Action'; 
-import { useSelector, useDispatch} from 'react-redux';
+// import {LoginProfile} from '../Action'; 
+import { useSelector} from 'react-redux';
 import { useNavigate} from "react-router-dom";
 
 const ChangePassword = () => {
     const  checkLogin = useSelector(state => state.LoginUsers);
     const navigate = useNavigate();
-    const  profileDetails = useSelector(state => state.LoginProfile);
+    // const  profileDetails = useSelector(state => state.LoginProfile);
 
-    const [details, setDetails] = useState({
-        _id : profileDetails._id,
-        firstname: profileDetails.firstname, 
-        lastname : profileDetails.lastname,
-        username : profileDetails.username,
-        phone :  profileDetails.phone,
-        email : profileDetails.email,
-        state : profileDetails.state,
-        address : profileDetails.address,
-        password : profileDetails.password,
-        birthday: '',
-        gender: ''
-    } );
+    // const [details, setDetails] = useState({
+    //     _id : profileDetails._id,
+    //     firstname: profileDetails.firstname, 
+    //     lastname : profileDetails.lastname,
+    //     username : profileDetails.username,
+    //     phone :  profileDetails.phone,
+    //     email : profileDetails.email,
+    //     state : profileDetails.state,
+    //     address : profileDetails.address,
+    //     password : profileDetails.password,
+    //     birthday: '',
+    //     gender: ''
+    // } );
   
     return (
         <div> 

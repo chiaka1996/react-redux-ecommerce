@@ -1,108 +1,108 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import ProfilesideBar from './profileSideBar';
 import Profile from '../cssModules/Userprofile.module.css';
-import {LoginProfile, LoginCheck, ToggleProfileOrder } from '../Action'; 
-import { useSelector, useDispatch} from 'react-redux';
+// import {LoginProfile, LoginCheck, ToggleProfileOrder } from '../Action'; 
+import { useSelector} from 'react-redux';
 import { useNavigate} from "react-router-dom";
 import {Link} from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 const UserProfile = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const navigate = useNavigate();
-    const  profileDetails = useSelector(state => state.LoginProfile);
+    // const  profileDetails = useSelector(state => state.LoginProfile);
 
     // check if user is logged in or not
     const  checkLogin = useSelector(state => state.LoginUsers);
-    const  ProfileOrderToggle = useSelector(state => state.ToggleProfileOrder);
-    const [editProfile, setEditProfile] = useState(true);
-    const [successmessage, setMessage] = useState('');
-    const[toggleOrder, setToggleOrder] = useState(true);
-    const [orderlist, setOrderList] = useState([]);
-    const [editedProfileDetails, setEditedProfileDetails] = useState({
-        _id : profileDetails._id,
-        firstname: profileDetails.firstname, 
-        lastname : profileDetails.lastname,
-        username : profileDetails.username,
-        phone :  profileDetails.phone,
-        email : profileDetails.email,
-        state : profileDetails.state,
-        address : profileDetails.address,
-        password : profileDetails.password
-    } );
+    // const  ProfileOrderToggle = useSelector(state => state.ToggleProfileOrder);
+    // const [editProfile, setEditProfile] = useState(true);
+    // const [successmessage, setMessage] = useState('');
+    // const[toggleOrder, setToggleOrder] = useState(true);
+    // const [orderlist, setOrderList] = useState([]);
+    // const [editedProfileDetails, setEditedProfileDetails] = useState({
+    //     _id : profileDetails._id,
+    //     firstname: profileDetails.firstname, 
+    //     lastname : profileDetails.lastname,
+    //     username : profileDetails.username,
+    //     phone :  profileDetails.phone,
+    //     email : profileDetails.email,
+    //     state : profileDetails.state,
+    //     address : profileDetails.address,
+    //     password : profileDetails.password
+    // } );
 
-     useEffect(() => {  
-        if(checkLogin ){
-         axios.post('https://protected-retreat-10926.herokuapp.com/apis/getsignupdetails', profileDetails )
-        .then((res) => {
-            setEditedProfileDetails({
-                _id : res.data._id,
-                firstname : res.data.firstname,
-                lastname :  res.data.lastname,
-                username :  res.data.username,
-                phone :  res.data.phone,
-                email :  res.data.email,
-                state :  res.data.state,
-                address :  res.data.address,
-                password :  res.data.password
-            })
-        });
+    //  useEffect(() => {  
+    //     if(checkLogin ){
+    //      axios.post('https://protected-retreat-10926.herokuapp.com/apis/getsignupdetails', profileDetails )
+    //     .then((res) => {
+    //         setEditedProfileDetails({
+    //             _id : res.data._id,
+    //             firstname : res.data.firstname,
+    //             lastname :  res.data.lastname,
+    //             username :  res.data.username,
+    //             phone :  res.data.phone,
+    //             email :  res.data.email,
+    //             state :  res.data.state,
+    //             address :  res.data.address,
+    //             password :  res.data.password
+    //         })
+    //     });
  
         //get orders from the backend
-        axios.post('https://protected-retreat-10926.herokuapp.com/apis/getUserOrders', profileDetails)
-        .then((res) => {
-            let data = res.data;
-            data.forEach((ord) => {
+    //     axios.post('https://protected-retreat-10926.herokuapp.com/apis/getUserOrders', profileDetails)
+    //     .then((res) => {
+    //         let data = res.data;
+    //         data.forEach((ord) => {
             
-            setOrderList((prev)=> [...prev, ...ord.order]);      
-            })
-            });
-    }
+    //         setOrderList((prev)=> [...prev, ...ord.order]);      
+    //         })
+    //         });
+    // }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [editProfile, toggleOrder]);
+    // }, [toggleOrder]);
 
-    const updateProfile = () => {
-        axios.put('https://protected-retreat-10926.herokuapp.com/apis/updatesignup', editedProfileDetails )
-    .then(
-        (res) => {
-            dispatch(LoginProfile(editedProfileDetails));
-            setMessage(res.data.message);
-            setEditProfile((prev)=> !prev);
-        }
-    ) 
-    }
+    // const updateProfile = () => {
+    //     axios.put('https://protected-retreat-10926.herokuapp.com/apis/updatesignup', editedProfileDetails )
+    // .then(
+    //     (res) => {
+    //         dispatch(LoginProfile(editedProfileDetails));
+    //         setMessage(res.data.message);
+    //         setEditProfile((prev)=> !prev);
+    //     }
+    // ) 
+    // }
 
-    const onChangeInput = (e) => {    
-        let inputValue = e.target.value;
-        let name = e.target.name;
-        setEditedProfileDetails({
-            ...editedProfileDetails,
-            [name] : inputValue
-        });       
-    }
+    // const onChangeInput = (e) => {    
+    //     let inputValue = e.target.value;
+    //     let name = e.target.name;
+    //     setEditedProfileDetails({
+    //         ...editedProfileDetails,
+    //         [name] : inputValue
+    //     });       
+    // }
 
-    const changeButton = () => {
-        setEditProfile((prev)=> !prev); 
-        setMessage('');
-    }
+    // const changeButton = () => {
+    //     setEditProfile((prev)=> !prev); 
+    //     setMessage('');
+    // }
 
-    const logoutUser = () => {
-        dispatch(LoginProfile({}));
-        dispatch(LoginCheck(false));
-        navigate('/');
-    } 
+    // const logoutUser = () => {
+    //     dispatch(LoginProfile({}));
+    //     dispatch(LoginCheck(false));
+    //     navigate('/');
+    // } 
 
-    const onclickProfile= () => {
-        dispatch(ToggleProfileOrder(true));
-        setToggleOrder((prev) => !prev);
-    }
+    // const onclickProfile= () => {
+    //     dispatch(ToggleProfileOrder(true));
+    //     setToggleOrder((prev) => !prev);
+    // }
 
-    const onclickOrder = () => {
-        dispatch(ToggleProfileOrder(false));
-        setToggleOrder((prev) => !prev);
-    }
+    // const onclickOrder = () => {
+    //     dispatch(ToggleProfileOrder(false));
+    //     setToggleOrder((prev) => !prev);
+    // }
 
     return (
         <div className="bodyContainer">

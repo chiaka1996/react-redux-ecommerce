@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import barcss from  '../cssModules/Sidebar.module.css';
 import { useDispatch } from 'react-redux';
 import {sideBarToggleHandler } from '../Action'; 
@@ -13,7 +13,6 @@ const SideBar = (props) => {
 
     const toggleFootwear = () => {
         setShowFootwear((showFootwear) => !showFootwear);
-        console.log(showFootwear);
     }
 
     const toggleCloths = () => {

@@ -11,7 +11,7 @@ const Checkout = () => {
     const location = useLocation();
     let productCloth = useSelector(state => state.clothsForSale);
     let productShoe = useSelector(state => state.ShoesForSale);
-    const {_id, listName, design, image, price, subtotal,description, status, productType, availableQuantity,quantity, size} = location.state;  
+    const {_id, listName, design, image, price,description, availableQuantity,size} = location.state;  
     const relatedItem = listName === 'Cloths' ? productCloth : productShoe;
     const reverseItem = relatedItem.reverse();
     const  ProductsInCart = useSelector(state => state.ProductsInCart);
@@ -51,7 +51,8 @@ const Checkout = () => {
             availableQuantity
         })
 
-    }, [displaySize, checkoutQuantity])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[displaySize, checkoutQuantity])
 
     
     for(let i = 0; i < availableQuantity; i++ ){
