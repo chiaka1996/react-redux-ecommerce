@@ -159,8 +159,14 @@ const UserProfile = () => {
                 chiakajunior@yahoo.com
                 </div>
                 </div>
+                
                 <div className={Profile.editNewsletter} style={{marginTop: '9%'}}>
+                <Link 
+                    to ="/profile/change_password" 
+                    style={{color: 'red', textDecoration: 'none'
+                    }}>
                 CHANGE PASSWORD
+                </Link>
                 </div>
                 </div>
 

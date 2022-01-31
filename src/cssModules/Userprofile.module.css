@@ -171,6 +171,15 @@ label{
     transition: top 0.5;
 }
 
+.error{
+    color: rgb(129, 0, 0);
+    position: absolute;
+    bottom: -48%;
+    font-size: 12px;
+    font-weight: bold;
+    left: 0;
+}
+
 .saveBtn{
     width: 100%;
     color: white;
